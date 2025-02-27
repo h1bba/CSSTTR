@@ -1,0 +1,89 @@
+:root {
+    --bgcolor: #493D9E;
+    --skincolor: #FFF0DC;
+    --eyecolor: #578FCA;
+    --wrinklecolor: #e2c7a4;
+    --eyebrowcolor: #96856f;
+
+}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bgcolor);
+    width: 100dvw;
+    height: 100dvh;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    justify-self: center;
+
+    /* aspect-ratio: 1; */
+    /* padding: 10em; */
+}
+
+header {
+    display: flex;
+    margin: auto;
+    width: 20rem;
+    height: 28rem;
+
+    border-radius: 70% / 90% 90% 50% 50%;
+    background-color: var(--skincolor);
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 10em auto;
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    height: 3em;
+}
+
+li {
+    width: 2em;
+    height: 3em;
+    background-color: var(--eyecolor);
+    border-radius: 2em;
+    padding: 0;
+    flex-direction: column;
+}
+
+li::before {
+    content: '';
+    position: absolute;
+    text-align: center;
+    width: 3em;
+    height: 8px;
+    margin-top: -1em;
+    margin-left: -0.5em;
+
+    background-color: var(--eyebrowcolor);
+
+}
+
+header::before {
+    content: '';
+    display: block;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 6em auto;
+    position: absolute;
+    background-color: var(--wrinklecolor);
+    width: 25%;
+    height: 4px;
+}
