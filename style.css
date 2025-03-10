@@ -2,12 +2,12 @@
     --bgcolor: #493D9E;
     --skincolor: #FFF0DC;
     --eyecolor: #578FCA;
-    --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 13%, rgba(129, 190, 255, 1) 13%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
-    --wrinklecolor: #e2c7a4;
-    --eyebrowcolor: #96856f;
+    --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
+    --wrinklecolor: #ccb596;
+    --eyebrowcolor: #fffece;
     --skingradient: radial-gradient(circle, rgba(255, 240, 220, 1) 0%, rgb(255, 184, 167) 100%);
     --eargradient: radial-gradient(circle, rgba(255, 240, 220, 1), rgb(255, 184, 167) 100%);
-
+    --shadowcolor: #ac967a;
 
     --mouthgradient: radial-gradient(circle, rgba(255, 138, 138, 1) 50%, rgba(255, 240, 220, 1) 100%);
     --cucumbergradient: linear-gradient(90deg, rgba(55, 88, 34, 1) 0%, rgba(38, 68, 18, 1) 10%, rgba(38, 68, 18, 1) 11%, rgba(55, 88, 34, 1) 20%, rgba(38, 68, 18, 1) 21%, rgba(55, 88, 34, 1) 40%, rgba(38, 68, 18, 1) 41%, rgba(55, 88, 34, 1) 60%, rgba(38, 68, 18, 1) 61%, rgba(55, 88, 34, 1) 80%, rgba(38, 68, 18, 1) 81%, rgba(38, 68, 18, 1) 91%, rgba(55, 88, 34, 1) 100%);
@@ -53,7 +53,7 @@ header {
 
     justify-content: center;
 
-    z-index: 1;
+    z-index: 2;
 
 }
 
@@ -105,7 +105,7 @@ ul::after {
     width: 3em;
     height: 6em;
     background-color: inherit;
-    box-shadow: var(--eyebrowcolor) -10px 6px;
+    box-shadow: var(--shadowcolor) -10px 6px;
     border-radius: 89% 11% 18% 82% / 85% 53% 47% 15%;
 }
 
@@ -118,6 +118,10 @@ li {
     padding: 0;
     flex-direction: column;
 
+    z-index: 1;
+
+    box-shadow: 0px .3em .1em var(--shadowcolor);
+
 }
 
 /* wenkbrauw */
@@ -129,10 +133,14 @@ li::before {
     height: 8px;
     margin-top: -1em;
     border-radius: 1em;
-    /* margin-left: -0.5em; */
+    rotate: 10deg;
 
     background-color: var(--eyebrowcolor);
 
+}
+
+li:nth-child(2)::before {
+    rotate: -10deg;
 }
 
 
@@ -176,6 +184,8 @@ section {
     top: 70%;
     left: 50%;
     transform: translateX(-50%);
+
+    z-index: 1;
 }
 
 section::before {
@@ -227,10 +237,12 @@ section img:nth-child(2) {
 }
 
 label {
+    z-index: 3;
 
+    cursor: pointer;
     position: absolute;
     left: 120%;
-    bottom: 5%;
+    bottom: -70%;
     rotate: 20deg;
 
     width: 4em;
@@ -238,7 +250,89 @@ label {
     border-radius: 2em;
     background: var(--cucumbergradient);
 
+
     input {
         visibility: hidden;
     }
+}
+
+@keyframes cucumbereat {
+    0% {
+        transform: translateY(0%);
+        rotate: 0deg;
+
+    }
+
+
+    100% {
+        transform: translate(10%, -100%);
+        rotate: -45deg;
+    }
+}
+
+@keyframes cucumberretract {
+    0% {
+        transform: translate(10%, -100%);
+        rotate: -45deg;
+    }
+
+    100% {
+        transform: translate(0, 0%);
+        rotate: 20deg;
+    }
+}
+
+/* komkommer animatie */
+label:has(input:checked) {
+    animation-name: cucumbereat;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+}
+
+label:has(input:not(:checked)) {
+    animation-name: cucumberretract;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes armeating {
+    0% {
+        height: 20em;
+        rotate: -10deg;
+
+    }
+
+
+    100% {
+        height: 10em;
+        rotate: 0deg;
+    }
+}
+
+@keyframes armretract {
+    0% {
+        height: 10em;
+        rotate: 0deg;
+
+    }
+
+    100% {
+        height: 20em;
+        rotate: -10deg;
+
+    }
+}
+
+/* arm animatie */
+header:has(input:checked)+section::before {
+    animation: armeating 2s;
+    animation-fill-mode: forwards;
+}
+
+/* arm animatie */
+header:has(input:not(:checked))+section::before {
+    animation: armretract 2s;
+    animation-fill-mode: forwards;
+
 }
