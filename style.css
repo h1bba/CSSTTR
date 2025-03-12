@@ -429,19 +429,31 @@ input[type="radio"] {
 
 }
 
+#haarkleur2:checked~section header:nth-of-type(1) {}
+
+#haarkleur3:checked~section header:nth-of-type(1) {}
+
 
 
 nav {
     position: absolute;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin-top: 10px;
-}
+    padding-left: 2em;
+    width: 40em;
 
-nav p {
-    color: white;
-    margin: 0;
-    padding-right: 1em;
+    & p {
+        color: white;
+        margin: 0;
+        padding-right: 1em;
+    }
+
+    & label {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 nav label {
