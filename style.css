@@ -12,6 +12,13 @@
 
     --mouthgradient: radial-gradient(circle, rgba(255, 138, 138, 1) 50%, rgba(255, 240, 220, 1) 100%);
     --cucumbergradient: linear-gradient(90deg, rgba(55, 88, 34, 1) 0%, rgba(38, 68, 18, 1) 10%, rgba(38, 68, 18, 1) 11%, rgba(55, 88, 34, 1) 20%, rgba(38, 68, 18, 1) 21%, rgba(55, 88, 34, 1) 40%, rgba(38, 68, 18, 1) 41%, rgba(55, 88, 34, 1) 60%, rgba(38, 68, 18, 1) 61%, rgba(55, 88, 34, 1) 80%, rgba(38, 68, 18, 1) 81%, rgba(38, 68, 18, 1) 91%, rgba(55, 88, 34, 1) 100%);
+    --wit: #fff;
+    --lichtgeel: #fffece;
+    --groen: #90db3f;
+    --lichtbruin: #74432c;
+
+    --bruin: #532915;
+
 }
 
 html {
@@ -19,6 +26,9 @@ html {
     margin: 0;
 }
 
+/* ///////////////// */
+/* achtegrond 🖼 */
+/* ///////////////// */
 body {
     background-color: var(--bgcolor);
     width: 100dvw;
@@ -28,28 +38,31 @@ body {
     overflow: hidden;
 }
 
-
-
+/* ///////////////// */
+/* Container geheel */
+/* ///////////////// */
 main {
     height: 100vh;
     display: flex;
     align-items: center;
 
     justify-self: center;
-
-    /* aspect-ratio: 1; */
-    /* padding: 10em; */
 }
 
+/* ///////////////// */
+/* section 1 hoofd 👨 */
+/* ///////////////// */
 
-/* section 1 hoofd */
 section:nth-of-type(1) {
     display: flex;
     justify-content: center;
     margin: 0 auto;
     position: relative;
 
-    /* HOOFD 1 ei vorm */
+    /* ///////////////// */
+    /* HOOFD 1 ei vorm 🥚 */
+    /* ///////////////// */
+
     header:nth-of-type(1) {
         position: absolute;
         bottom: -15em;
@@ -67,9 +80,11 @@ section:nth-of-type(1) {
 
         opacity: 1;
 
+        /* ///////////////// */
+        /* komkommer 🥒*/
+        /* ///////////////// */
 
-        /* komkommer */
-        & label:nth-child(2) {
+        label:nth-child(2) {
             z-index: 3;
 
             cursor: pointer;
@@ -89,7 +104,11 @@ section:nth-of-type(1) {
             }
         }
 
-        & ul {
+        /* ///////////////// */
+        /* container voor neus👃, oren 👂 en ogen 👀*/
+        /* ///////////////// */
+
+        ul {
             padding: 0;
             list-style: none;
             margin: 10em auto;
@@ -97,30 +116,38 @@ section:nth-of-type(1) {
             display: flex;
             justify-content: space-between;
             height: 3em;
+
+            /* ///////////////// */
+            /* neus 👃*/
+            /* ///////////////// */
+
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 47%;
+                left: 40%;
+                margin: auto;
+                width: 3em;
+                height: 6em;
+                background-color: inherit;
+                box-shadow: var(--shadowcolor) -10px 6px;
+                border-radius: 89% 11% 18% 82% / 85% 53% 47% 15%;
+            }
         }
 
-        /* neus */
-        & ul::after {
-            content: "";
-            display: block;
-            position: absolute;
-            top: 47%;
-            left: 40%;
-            margin: auto;
-            width: 3em;
-            height: 6em;
-            background-color: inherit;
-            box-shadow: var(--shadowcolor) -10px 6px;
-            border-radius: 89% 11% 18% 82% / 85% 53% 47% 15%;
-        }
+        /* ///////////////// */
+        /* haar 💈 */
+        /* ///////////////// */
 
         & ul::before {
             content: "";
             position: absolute;
             display: block;
             margin: auto;
-            left: 5%;
-            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -2%;
             width: 90%;
             /* opacity: 0; */
             height: 60%;
@@ -129,7 +156,10 @@ section:nth-of-type(1) {
             clip-path: ellipse(00% 00% at 50% 20%);
         }
 
-        /* ogen */
+        /* ///////////////// */
+        /* ogen 👀*/
+        /* ///////////////// */
+
         & li {
             width: 4em;
             height: 3em;
@@ -145,8 +175,10 @@ section:nth-of-type(1) {
         }
 
 
+        /* ///////////////// */
+        /* wenkbrauw links <-- 😡*/
+        /* ///////////////// */
 
-        /* wenkbrauw */
         & li::before {
             content: '';
             position: absolute;
@@ -161,11 +193,18 @@ section:nth-of-type(1) {
 
         }
 
+        /* ///////////////// */
+        /* wenkbrauw rechts --> 😡*/
+        /* ///////////////// */
+
         & li:nth-child(2)::before {
             rotate: -10deg;
         }
 
-        /* linker oor */
+        /* ///////////////// */
+        /* linker oor <--👂*/
+        /* ///////////////// */
+
         & li:nth-of-type(1)::after {
             content: "";
             position: absolute;
@@ -173,14 +212,17 @@ section:nth-of-type(1) {
             width: 4em;
             height: 8em;
             right: 95%;
-            rotate: 10deg;
+            rotate: 5deg;
 
             clip-path: ellipse();
             z-index: 0;
 
         }
 
-        /* rechter oor */
+        /* ///////////////// */
+        /* rechter oor -->👂*/
+        /* ///////////////// */
+
         & li:nth-of-type(2)::after {
             content: "";
             position: absolute;
@@ -188,7 +230,7 @@ section:nth-of-type(1) {
             width: 4em;
             height: 8em;
             left: 95%;
-            rotate: -10deg;
+            rotate: -5deg;
 
             clip-path: ellipse();
             z-index: 0;
@@ -198,7 +240,10 @@ section:nth-of-type(1) {
 
 }
 
-/* rimpel */
+/* ///////////////// */
+/* rimpel 👨‍🦳 ----- */
+/* ///////////////// */
+
 header:nth-of-type(1)::before {
     content: '';
     display: block;
@@ -212,7 +257,10 @@ header:nth-of-type(1)::before {
     height: 4px;
 }
 
-/* mond */
+/* ///////////////// */
+/* mond 👄*/
+/* ///////////////// */
+
 header:nth-of-type(1)::after {
     content: "";
     position: absolute;
@@ -228,6 +276,9 @@ header:nth-of-type(1)::after {
 
 
 
+/* ///////////////// */
+/* lichaam 🧍‍♂️ */
+/* ///////////////// */
 
 section:nth-of-type(2) {
     position: absolute;
@@ -242,6 +293,11 @@ section:nth-of-type(2) {
 
     z-index: 1;
 
+    /* ///////////////// */
+    /* Pepsi max 🍾 */
+    /* https://www.kff.co.uk/pepsi-max-bottle/p/227 */
+    /* ///////////////// */
+
     & img:nth-child(1) {
         position: absolute;
         right: 85%;
@@ -250,6 +306,11 @@ section:nth-of-type(2) {
         z-index: 2;
         rotate: -20deg;
     }
+
+    /* ///////////////// */
+    /* the north face logo op jas 🧥*/
+    /* https://en.wikipedia.org/wiki/The_North_Face#/media/File:The_North_Face.png */
+    /* ///////////////// */
 
     & img:nth-child(2) {
         position: absolute;
@@ -261,7 +322,10 @@ section:nth-of-type(2) {
     }
 }
 
-/* linker arm */
+/* ///////////////// */
+/* linker arm <-- 💪*/
+/* ///////////////// */
+
 section:nth-of-type(2)::before {
     content: "";
     position: absolute;
@@ -277,7 +341,10 @@ section:nth-of-type(2)::before {
     rotate: -10deg;
 }
 
-/* rechter arm */
+/* ///////////////// */
+/* rechter arm --> 💪*/
+/* ///////////////// */
+
 section:nth-of-type(2)::after {
     content: "";
     position: absolute;
@@ -292,10 +359,6 @@ section:nth-of-type(2)::after {
     transform-origin: top;
     rotate: 10deg;
 }
-
-
-
-
 
 @keyframes cucumbereat {
     0% {
@@ -323,20 +386,29 @@ section:nth-of-type(2)::after {
     }
 }
 
-/* komkommer animatie */
-label:has(input:checked) {
+/* ///////////////// */
+/* komkommer animatie IN 📈 */
+/* ///////////////// */
+
+section:nth-of-type(1) label:has(input:checked) {
     animation-name: cucumbereat;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 
-label:has(input:not(:checked)) {
+/* ///////////////// */
+/* komkommer animatie UIT 📉 */
+/* ///////////////// */
+section:nth-of-type(1) label:has(input:not(:checked)) {
     animation-name: cucumberretract;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 
 }
 
+/* ///////////////// */
+/* Arm animatie IN 💪 */
+/* ///////////////// */
 @keyframes armeating {
     0% {
         height: 20em;
@@ -351,6 +423,9 @@ label:has(input:not(:checked)) {
     }
 }
 
+/* ///////////////// */
+/* Arm animatie UIT 💪 */
+/* ///////////////// */
 @keyframes armretract {
     0% {
         height: 10em;
@@ -365,107 +440,294 @@ label:has(input:not(:checked)) {
     }
 }
 
-/* arm animatie in*/
+
+
+
+/* ///////////////// */
+/* Arm animatie IN 💪 */
+/* ///////////////// */
 section:nth-of-type(1):has(input:checked)~section:nth-of-type(2)::before {
     animation: armeating 2s;
     animation-fill-mode: forwards;
 }
 
-/* arm animatie uit*/
+/* ///////////////// */
+/* Arm animatie UIT 💪 */
+/* ///////////////// */
 section:nth-of-type(1):has(input:not(:checked))~section:nth-of-type(2)::before {
     animation: armretract 2s;
     animation-fill-mode: forwards;
 }
 
-input[type="radio"] {
-    display: none;
+/* ///////////////// */
+/* Hoofdvorm 🥚🧔🏼  */
+/* ///////////////// */
+main:has(input[value="head1"]:checked) header {
+    border-radius: 70% / 90% 90% 50% 50%;
 }
 
-/* laat de juiste hoofd zien */
-/* #head1:checked~section header:nth-of-type(1),
-#head2:checked~section header:nth-of-type(2),
-#head3:checked~section header:nth-of-type(3) {
-    opacity: 1;
-} */
-
-
-
-#head2:checked~section header:nth-of-type(1) {
-
-    --skingradient: radial-gradient(circle, rgb(241, 220, 193) 0%, rgb(238, 201, 153));
-    --eargradient: radial-gradient(circle, rgb(241, 220, 193) 0%, rgb(238, 201, 153));
-
+main:has(input[value="head2"]:checked) header {
+    border-radius: 80% / 120% 120% 75% 75%;
 }
 
-#head3:checked~section header:nth-of-type(1) {
+main:has(input[value="head3"]:checked) header {
+    border-radius: 75% / 50% 50% 100% 100%;
 
-    --skingradient: radial-gradient(circle, rgb(166, 123, 91) 0%, rgb(111, 78, 55));
-    --eargradient: radial-gradient(circle, rgb(166, 123, 91) 0%, rgb(111, 78, 55));
-
+    /* bij hoofdvorm 3 de haar breder maken zodat het past op het hoofd */
+    & ul::before {
+        width: 105%;
+    }
 }
 
-#oog1:checked~section header:nth-of-type(1) li {
-    --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
 
+
+/* ///////////////// */
+/* Huidskleur 🧔👨🏻👨🏽  */
+/* ///////////////// */
+
+main {
+    &:has(input[value="skincolor1"]:checked) header {
+        --skingradient: radial-gradient(circle, rgba(255, 240, 220, 1) 0%, rgba(255, 184, 167, 1));
+        --eargradient: radial-gradient(circle, rgba(255, 240, 220, 1), rgb(255, 184, 167) 100%);
+    }
+
+    &:has(input[value="skincolor2"]:checked) header {
+        --skingradient: radial-gradient(circle, rgb(241, 220, 193) 0%, rgb(238, 201, 153));
+        --eargradient: radial-gradient(circle, rgb(241, 220, 193) 0%, rgb(238, 201, 153));
+
+    }
+
+    &:has(input[value="skincolor3"]:checked) header {
+        --skingradient: radial-gradient(circle, rgb(166, 123, 91) 0%, rgb(111, 78, 55));
+        --eargradient: radial-gradient(circle, rgb(166, 123, 91) 0%, rgb(111, 78, 55));
+    }
+
+    /* ///////////////// */
+    /* Ogen 👀 */
+    /* ///////////////// */
+
+    &:has(input[value="oog1"]:checked) header ul li {
+        --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
+
+    }
+
+    &:has(input[value="oog2"]:checked) header ul li {
+        --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgb(131, 233, 72) 20%, rgb(65, 197, 116) 49%, rgba(255, 255, 255, 1) 49%);
+    }
+
+    &:has(input[value="oog3"]:checked) header ul li {
+        --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgb(100, 56, 30) 20%, rgb(90, 45, 44) 49%, rgba(255, 255, 255, 1) 49%);
+
+    }
+
+    /* ///////////////// */
+    /* Haarstyles 👱🏽‍♂️ */
+    /* ///////////////// */
+
+    &:has(input[value="haar1"]:checked) ul::before {}
+
+    &:has(input[value="haar2"]:checked) ul::before {
+        clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
+
+    }
+
+    &:has(input[value="haar3"]:checked) ul::before {
+        clip-path: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
+
+    }
+
+    &:has(input[value="haar4"]:checked) ul::before {
+        clip-path: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
+
+    }
+
+    /* ///////////////// */
+    /* Haarkleur 👱🏽‍♂️💛🤎🖤 */
+    /* ///////////////// */
+
+    &:has(input[value="haarkleur1"]:checked) {
+        --eyebrowcolor: #fffece;
+    }
+
+    &:has(input[value="haarkleur2"]:checked) {
+        --eyebrowcolor: #a47148;
+    }
+
+    &:has(input[value="haarkleur3"]:checked) {
+        --eyebrowcolor: #583101;
+    }
 }
 
-#oog2:checked~section header:nth-of-type(1) li {
-    --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgb(131, 233, 72) 20%, rgb(65, 197, 116) 49%, rgba(255, 255, 255, 1) 49%);
 
-}
-
-#oog3:checked~section header:nth-of-type(1) li {
-    --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgb(100, 56, 30) 20%, rgb(90, 45, 44) 49%, rgba(255, 255, 255, 1) 49%);
-
-}
-
-#haar2:checked~section header:nth-of-type(1) ul::before {
-    clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
-
-}
-
-#haar3:checked~section header:nth-of-type(1) ul::before {
-    clip-path: ellipse(00% 00% at 50% 20%);
-
-}
-
-#haarkleur2:checked~section header:nth-of-type(1) {}
-
-#haarkleur3:checked~section header:nth-of-type(1) {}
-
-
-
+/* ///////////////// */
+/* MENU 📁 */
+/* ///////////////// */
 nav {
     position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 10px;
-    padding-left: 2em;
-    width: 40em;
+    margin-left: 2em;
+    padding: 2em;
+    width: 10em;
+    background-color: rgba(0, 0, 0, .33);
+    color: white;
+    border-radius: 2em;
+    border: 4px solid white;
 
-    & p {
-        color: white;
-        margin: 0;
-        padding-right: 1em;
-    }
-
-    & label {
+    label {
         display: flex;
         flex-direction: row;
     }
+
+    input {
+        opacity: 0;
+    }
+
+    /* ///////////////// */
+    /* 👱🏽‍♂️👨🏽👨🏻Huidskleuren selector */
+    /* ///////////////// */
+
+    label:nth-of-type(1) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--wit);
+    }
+
+    label:nth-of-type(2) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--eyebrowcolor);
+    }
+
+    label:nth-of-type(3) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--bruin);
+    }
+
+
+    /* ///////////////// */
+    /* 🥚 Hoofdvorm selecteren */
+    /* ///////////////// */
+    label:nth-of-type(4) {
+        width: 48px;
+        height: 48px;
+        background-color: var(--wit);
+        border-radius: 70% / 90% 90% 50% 50%;
+    }
+
+    label:nth-of-type(5) {
+        width: 48px;
+        height: 48px;
+        background-color: var(--wit);
+        border-radius: 80% / 120% 120% 75% 75%;
+
+    }
+
+    label:nth-of-type(6) {
+        width: 48px;
+        height: 48px;
+        background-color: var(--wit);
+        border-radius: 75% / 50% 50% 100% 100%;
+
+    }
+
+
+    /* ///////////////// */
+    /* 👁‍🗨 Oogkleur selecteren */
+    /* ///////////////// */
+    label:nth-of-type(7) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--eyecolor);
+    }
+
+    label:nth-of-type(8) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--groen);
+    }
+
+    label:nth-of-type(9) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--bruin);
+    }
+
+    /* ///////////////// */
+    /* 👱🏼‍♂️ Haarstyle selecteren */
+    /* ///////////////// */
+
+    label:nth-of-type(10) {
+        width: 48px;
+        height: 48px;
+        background-color: var(--wit);
+        border-radius: 100%;
+        /* clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%); */
+    }
+
+    label:nth-of-type(11) {
+        width: 48px;
+        height: 48px;
+        background-color: var(--wit);
+        clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
+    }
+
+    label:nth-of-type(12) {
+        width: 48px;
+        height: 48px;
+        background-color: var(--wit);
+        clip-path: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
+
+    }
+
+    label:nth-of-type(13) {
+        width: 48px;
+        height: 48px;
+        background-color: var(--wit);
+        clip-path: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
+
+    }
+
+
+    /* ///////////////// */
+    /* 🤎🖤Haarkleur selecteren */
+    /* ///////////////// */
+
+    label:nth-of-type(14) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--lichtgeel);
+
+    }
+
+    label:nth-of-type(15) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--lichtbruin);
+
+    }
+
+    label:nth-of-type(16) {
+        width: 24px;
+        height: 24px;
+        background-color: var(--bruin);
+
+    }
+
 }
 
 nav label {
-    width: 15px;
-    height: 15px;
-    background: white;
-    border-radius: 50%;
+    /* border-radius: 50%; */
     margin: 5px;
     cursor: pointer;
     transition: transform 0.2s;
+    transform-origin: center;
 }
 
+nav {}
+
 nav label:hover {
-    transform: scale(1.2);
+    /* transform: scale(1.2); */
 }
