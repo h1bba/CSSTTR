@@ -44,4 +44,42 @@ Een mooi voorbeeld hiervan is de **ul li** voor de ogen 👀, dit zijn inprincip
 
 Ik heb het gevoel dat dit de juiste keuze was omdat we de pseudo element ::before hebben kunnen gebruiken om de wenkbrauw toe te voegen en de ::after om de bijbehorende oor 👂 toe te voegen aan de kant van het hoofd.
 
+#### Voortgangsgesprek feedback
+- Leuk idee
+- Rijk aan uitbreidingsmogelijkheden
+- Tips met border-radius gebruik om gewenste vormen te realiseren
+
 ## Week 2
+
+*In week 2 was ik ziek na de maandag waardoor ik ook het 2e voortgangsgesprek heb gemist.*
+
+### Onderzoek
+- Border-radius gebruik: [Bron](https://css-tricks.com/the-shapes-of-css/)
+- Workshop van Sanne: Vormpjes maken met CSS
+- Komkommer gradient: [Bron](https://cssgradient.io/)
+
+### Voortgang
+Ik heb de personage kunnen maken na veel handmatig de waardes heen en weer aan te passen totdat ik blij was met de styling. D
+![Week2 progress](https://github.com/user-attachments/assets/1f802fea-9428-4b6d-b57f-0e9e00462b86)
+
+### Week 3
+
+### Onderzoek
+- CSS only carousel: [Bron](https://css-tricks.com/css-only-carousel/)
+- :has() gebruik [Bron](https://www.w3schools.com/cssref/sel_has.php)
+- Clip-path: [Bron](https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path)
+- Squiggly line use: [Bron](https://developer.mozilla.org/en-US/docs/Web/CSS/Subsequent-sibling_combinator)
+
+### Progress
+In week 3 was ik vooral bezig met de UX kant van mijn project, dit was dus labels en inputs maken, die properties van de CSS overschrijft zodra er een radio button wordt gechecked.
+Hierdoor kan ik met de juiste selectors een "UI" creëeren zonder het gebruik van JavaScript.
+
+Wat ik dus doe voor bijvoorbeeld de huidskleur veranderen is de variabele in de root een andere value geven dan voorgaand.
+![huidskleur](https://github.com/user-attachments/assets/52242fb3-0b67-4d2f-8b7d-b654271a99ca)
+
+Voor de haarstijl heb ik clip-path leren gebruiken. Wat hier vooral complex was dat ik clip-path moest gebruiken wat ik niet eerder heb aangeraakt. Na wat hulp van Nils Binder en wat bronnen hebben we samen onze eerste haarstyle kunnen maken.
+![haarstyle](https://github.com/user-attachments/assets/7dbee0c2-4df0-47bb-9a08-28623cae8318)
+
+
+![Week3](https://github.com/user-attachments/assets/0105ee8e-c1fc-4b12-b015-698a10bb454d)
+
