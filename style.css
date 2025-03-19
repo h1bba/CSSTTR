@@ -74,7 +74,7 @@ body {
 
 h1 {
     position: absolute;
-    font-size: 2rem;
+    font-size: 3rem;
     left: 50%;
     top: 10%;
     transform: translateX(-50%);
@@ -82,7 +82,7 @@ h1 {
     color: var(--wit);
     font-family: Atma, sans-serif;
     font-weight: 600;
-
+    text-align: center;
 }
 
 /* ///////////////// */
@@ -930,6 +930,14 @@ nav label:hover {
         transform: translateX(-50%);
         margin: 0 auto;
     }
+
+    h1 {
+        font-size: 2rem;
+        bottom: 0;
+        top: unset;
+        text-orientation: upright;
+        z-index: 5;
+    }
 }
 
 @media (max-width: 500px) {
@@ -951,5 +959,17 @@ nav label:hover {
         left: 50%;
         transform: translateX(-50%);
         margin: 0 auto;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --bgcolor: radial-gradient(circle, rgba(44, 116, 114, 1) 0%, rgba(58, 211, 221, 1) 100%);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bgcolor: radial-gradient(circle, rgba(53, 44, 116, 1) 0%, rgba(73, 61, 158, 1) 100%);
     }
 }
