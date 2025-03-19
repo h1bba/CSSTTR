@@ -59,7 +59,7 @@ Ik heb het gevoel dat dit de juiste keuze was omdat we de pseudo element ::befor
 - Komkommer gradient: [Bron](https://cssgradient.io/)
 
 ### Voortgang
-Ik heb de personage kunnen maken na veel handmatig de waardes heen en weer aan te passen totdat ik blij was met de styling. D
+Ik heb de personage kunnen maken na veel handmatig de waardes heen en weer aan te passen totdat ik blij was met de styling.
 ![Week2 progress](https://github.com/user-attachments/assets/1f802fea-9428-4b6d-b57f-0e9e00462b86)
 
 ### Week 3
@@ -80,6 +80,67 @@ Wat ik dus doe voor bijvoorbeeld de huidskleur veranderen is de variabele in de 
 Voor de haarstijl heb ik clip-path leren gebruiken. Wat hier vooral complex was dat ik clip-path moest gebruiken wat ik niet eerder heb aangeraakt. Na wat hulp van Nils Binder en wat bronnen hebben we samen onze eerste haarstyle kunnen maken.
 ![haarstyle](https://github.com/user-attachments/assets/7dbee0c2-4df0-47bb-9a08-28623cae8318)
 
+Ook heb ik een komkommer animatie gemaakt
+![komkommer animatie](https://github.com/user-attachments/assets/0958654b-7127-4e27-8b31-121c43435f3e)
+
 
 ![Week3](https://github.com/user-attachments/assets/0105ee8e-c1fc-4b12-b015-698a10bb454d)
 
+#### Voortgangsgesprek feedback
+- UI laten zien welke optie geselecteerd is
+- Feedforward laten zien, op hover dat de style al zichtbaar is
+- CSS nesting meer gebruiken
+- Opschonen code met onnodig "&" gebruik
+- Inputs en labels in elkaar nesten zodat ID niet gebruikt hoeft te worden
+- Animatie komkommer een hapje nemen
+- Meer en betere comments
+- Responsive
+
+### Week 4
+
+In week 4 moest ik vooral gas geven na dat ik (voor mijn gevoel) veel feedback kreeg
+Ik begon met de labels en inputs op de juiste manier te nesten
+
+- [x] Inputs en labels in elkaar nesten zodat ID niet gebruikt hoeft te worden
+
+Before
+
+![labelseninputs](https://github.com/user-attachments/assets/aeecf1f1-17f6-4e47-8c00-951d045eb228)
+![labelseninputs](https://github.com/user-attachments/assets/4b1a9f59-7411-44da-bb4c-784e209b0ad1)
+
+After
+
+![labelseninputsnesting](https://github.com/user-attachments/assets/3460ef6c-6ebc-49c2-a858-84386bd7a080)
+
+
+- [x] UI laten zien welke optie geselecteerd is
+- [x] Feedforward laten zien, op hover dat de style al zichtbaar is
+
+Daarna ben ik bezig geweest om de UI te verbeteren en heb ik de feedforward kunnen toepassen na wat hulp van Jamie T
+
+![feedforward](https://github.com/user-attachments/assets/0cd40a67-d669-4b9f-bb3c-1169980589b0)
+![image](https://github.com/user-attachments/assets/2422b51a-fe94-46f7-b27b-552bcaa2e053)
+
+Ook heb ik wat comments geplaatst in mijn CSS om het wat overzichtelijker te maken
+- [x] Meer en betere comments
+
+![image](https://github.com/user-attachments/assets/9440a1a1-e859-40e0-8217-717c002df14e)
+
+- [x] CSS nesting meer gebruiken
+- [x] Opschonen code met onnodig "&" gebruik
+![image](https://github.com/user-attachments/assets/3ad3703c-0126-4677-804f-9572b7d27a59)
+
+Na deze dingen gefixt te hebben heb ik nog weinig tijd gehad om de puntjes op de i te zetten. Ik heb nog de komkommer animatie verbeterd waar de personage 2 hapjes neemt uit de komkommer.
+Dit heb ik gedaan met het gebruik van clip path in een animatie zelf.
+![komkommer](https://github.com/user-attachments/assets/e90ce455-d1d7-4f18-881f-aa47c7990036)
+
+
+![clippath](https://github.com/user-attachments/assets/511d5a4d-2d9a-45e9-b546-899b613b8884)
+
+Het was hier belangrijk om dezelfde aantal punten te behouden in de clip-path zodat de animatie ook werkelijk geanimeerd is
+
+- [x] Responsive
+en als laatst heb ik nog wat responsivity toegevoegd
+![responsivity](https://github.com/user-attachments/assets/6d8b9a5f-903f-4a57-961d-eb2c34689f43)
+
+**Bedankt voor het lezen**
