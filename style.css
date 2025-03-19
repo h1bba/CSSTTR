@@ -1,5 +1,37 @@
+/* https://fonts.google.com/specimen/Atma?categoryFilters=Feeling:%2FExpressive%2FPlayful */
+@font-face {
+    font-family: Atma;
+    src: url(/assets/Atma-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Atma;
+    src: url(/assets/Atma-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Atma;
+    src: url(/assets/Atma-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Atma;
+    src: url(/assets/Atma-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Atma;
+    src: url(/assets/Atma-Light.ttf);
+    font-weight: 300;
+}
+
 :root {
-    --bgcolor: #493D9E;
+    --bgcolor: radial-gradient(circle, rgba(53, 44, 116, 1) 0%, rgba(73, 61, 158, 1) 100%);
+    ;
     --skincolor: #FFF0DC;
     --eyecolor: #578FCA;
     --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
@@ -30,12 +62,27 @@ html {
 /* achtegrond 🖼 */
 /* ///////////////// */
 body {
-    background-color: var(--bgcolor);
+    background: var(--bgcolor);
     width: 100dvw;
     height: 100dvh;
     padding: 0;
     margin: 0;
     overflow: hidden;
+
+    font-family: Atma, sans-serif;
+}
+
+h1 {
+    position: absolute;
+    font-size: 2rem;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+    margin: auto;
+    color: var(--wit);
+    font-family: Atma, sans-serif;
+    font-weight: 600;
+
 }
 
 /* ///////////////// */
@@ -361,20 +408,20 @@ section:nth-of-type(2)::after {
     rotate: 10deg;
 }
 
+
+/* ///////////////// */
+/* komkommer eet animatie 🥒*/
+/* ///////////////// */
 @keyframes cucumbereat {
     0% {
         transform: translateY(0%);
         rotate: 0deg;
-
     }
-
-
 
     70% {
         transform: translate(10%, -100%);
         rotate: -45deg;
         clip-path: polygon(0 0, 50% 0, 100% 0, 100% 10%, 100% 100%, 0 100%, 0 15%);
-
     }
 
     80%, 90% {
@@ -476,33 +523,19 @@ section:nth-of-type(1):has(input:not(:checked))~section:nth-of-type(2)::before {
     animation-fill-mode: forwards;
 }
 
-/* ///////////////// */
-/* Hoofdvorm 🥚🧔🏼  */
-/* ///////////////// */
-main:has(input[value="head1"]:checked) header {
-    border-radius: 70% / 90% 90% 50% 50%;
-}
 
-main:has(input[value="head2"]:checked) header {
-    border-radius: 80% / 120% 120% 75% 75%;
-}
-
-main:has(input[value="head3"]:checked) header {
-    border-radius: 75% / 50% 50% 100% 100%;
-
-    /* bij hoofdvorm 3 de haar breder maken zodat het past op het hoofd */
-    & ul::before {
-        width: 105%;
-    }
-}
 
 
 
 /* ///////////////// */
-/* Huidskleur 🧔👨🏻👨🏽  */
+/* Selectors ✔  */
 /* ///////////////// */
 
 main {
+
+    /* ///////////////// */
+    /* Huidskleur 🧔👨🏻👨🏽  */
+    /* ///////////////// */
     &:has(input[value="skincolor1"]:checked) header {
         --skingradient: radial-gradient(circle, rgba(255, 240, 220, 1) 0%, rgba(255, 184, 167, 1));
         --eargradient: radial-gradient(circle, rgba(255, 240, 220, 1), rgb(255, 184, 167) 100%);
@@ -519,9 +552,68 @@ main {
         --eargradient: radial-gradient(circle, rgb(166, 123, 91) 0%, rgb(111, 78, 55));
     }
 
+    /* hovers */
+
+    &:has(nav > div:first-of-type > label:first-of-type:hover) header {
+        --skingradient: radial-gradient(circle, rgba(255, 240, 220, 1) 0%, rgba(255, 184, 167, 1));
+        --eargradient: radial-gradient(circle, rgba(255, 240, 220, 1), rgb(255, 184, 167) 100%);
+    }
+
+    &:has(nav > div:first-of-type > label:nth-of-type(2):hover) header {
+        --skingradient: radial-gradient(circle, rgb(241, 220, 193) 0%, rgb(238, 201, 153));
+        --eargradient: radial-gradient(circle, rgb(241, 220, 193) 0%, rgb(238, 201, 153));
+
+    }
+
+    &:has(nav > div:first-of-type > label:nth-of-type(3):hover) header {
+        --skingradient: radial-gradient(circle, rgb(166, 123, 91) 0%, rgb(111, 78, 55));
+        --eargradient: radial-gradient(circle, rgb(166, 123, 91) 0%, rgb(111, 78, 55));
+    }
+
+    /* ///////////////// */
+    /* Hoofdvorm 🥚🧔🏼  */
+    /* ///////////////// */
+    &:has(input[value="head1"]:checked) header {
+        border-radius: 70% / 90% 90% 50% 50%;
+    }
+
+    &:has(input[value="head2"]:checked) header {
+        border-radius: 80% / 120% 120% 75% 75%;
+    }
+
+    &:has(input[value="head3"]:checked) header {
+        border-radius: 75% / 50% 50% 100% 100%;
+
+        /* bij hoofdvorm 3 de haar breder maken zodat het past op het hoofd */
+        & ul::before {
+            width: 105%;
+        }
+    }
+
+    /* hovers */
+    &:has(nav > div:nth-of-type(2) > label:nth-of-type(1):hover) header {
+        border-radius: 70% / 90% 90% 50% 50%;
+
+    }
+
+    &:has(nav > div:nth-of-type(2) > label:nth-of-type(2):hover) header {
+        border-radius: 80% / 120% 120% 75% 75%;
+
+    }
+
+    &:has(nav > div:nth-of-type(2) > label:nth-of-type(3):hover) header {
+        border-radius: 75% / 50% 50% 100% 100%;
+
+        /* bij hoofdvorm 3 de haar breder maken zodat het past op het hoofd */
+        & ul::before {
+            width: 105%;
+        }
+    }
+
     /* ///////////////// */
     /* Ogen 👀 */
     /* ///////////////// */
+
 
     &:has(input[value="oog1"]:checked) header ul li {
         --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
@@ -537,11 +629,27 @@ main {
 
     }
 
+    /* hovers */
+
+    &:has(nav > div:nth-last-of-type(3) > label:nth-of-type(1):hover) header ul li {
+        --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
+    }
+
+    &:has(nav > div:nth-last-of-type(3) > label:nth-of-type(2):hover) header ul li {
+        --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgb(131, 233, 72) 20%, rgb(65, 197, 116) 49%, rgba(255, 255, 255, 1) 49%);
+    }
+
+    &:has(nav > div:nth-last-of-type(3) > label:nth-of-type(3):hover) header ul li {
+        --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgb(100, 56, 30) 20%, rgb(90, 45, 44) 49%, rgba(255, 255, 255, 1) 49%);
+    }
+
     /* ///////////////// */
     /* Haarstyles 👱🏽‍♂️ */
     /* ///////////////// */
 
-    &:has(input[value="haar1"]:checked) ul::before {}
+    &:has(input[value="haar1"]:checked) ul::before {
+        clip-path: ellipse(00% 00% at 50% 20%);
+    }
 
     &:has(input[value="haar2"]:checked) ul::before {
         clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
@@ -558,6 +666,25 @@ main {
 
     }
 
+    /* hovers */
+
+    &:has(nav > div:nth-of-type(4) > label:nth-of-type(1):hover) ul::before {
+        clip-path: ellipse(00% 00% at 50% 20%);
+    }
+
+    &:has(nav > div:nth-of-type(4) > label:nth-of-type(2):hover) ul::before {
+        clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
+    }
+
+    &:has(nav > div:nth-of-type(4) > label:nth-of-type(3):hover) ul::before {
+        clip-path: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
+    }
+
+    &:has(nav > div:nth-of-type(4) > label:nth-of-type(4):hover) ul::before {
+        clip-path: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
+    }
+
+
     /* ///////////////// */
     /* Haarkleur 👱🏽‍♂️💛🤎🖤 */
     /* ///////////////// */
@@ -573,7 +700,22 @@ main {
     &:has(input[value="haarkleur3"]:checked) {
         --eyebrowcolor: #583101;
     }
+
+    /* hovers */
+    &:has(nav > div:nth-of-type(5) > label:nth-of-type(1):hover) {
+        --eyebrowcolor: #fffece;
+    }
+
+    &:has(nav > div:nth-of-type(5) > label:nth-of-type(2):hover) {
+        --eyebrowcolor: #a47148;
+    }
+
+    &:has(nav > div:nth-of-type(5) > label:nth-of-type(3):hover) {
+        --eyebrowcolor: #583101;
+    }
+
 }
+
 
 
 /* ///////////////// */
@@ -585,20 +727,24 @@ nav {
     flex-direction: column;
     justify-content: center;
     margin-left: 2em;
-    padding: 2em;
+    padding: 1em;
     width: min-content;
     background-color: rgba(0, 0, 0, .33);
     color: white;
     border-radius: 2em;
     border: 4px solid white;
-
+    /* 
     label {
         display: flex;
         flex-direction: row;
-    }
+    } */
 
     input {
         opacity: 0;
+    }
+
+    p {
+        padding-right: 1em;
     }
 
     /* ///////////////// */
@@ -618,7 +764,7 @@ nav {
     div:nth-of-type(1) label:nth-of-type(2) {
         width: 2em;
         height: 2em;
-        background-color: var(--eyebrowcolor);
+        background-color: #fffece;
     }
 
     div:nth-of-type(1) label:nth-of-type(3) {
@@ -745,30 +891,65 @@ nav {
 }
 
 nav label {
-    /* border-radius: 50%; */
     margin: 5px;
     cursor: pointer;
     transition: transform 0.2s;
     transform-origin: center;
 }
 
-nav {}
+label:has(input:checked) {
+    transform: scale(1.2);
+    outline: 2px solid yellow;
+}
+
 
 nav label:hover {
     cursor: pointer;
     transform: scale(1.2);
+    outline: 2px solid yellow;
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     section:nth-of-type(1) {
         z-index: 2;
         transform: scale(0.8);
+        top: 7%;
     }
 
     section:nth-of-type(2) {
         margin: auto;
-        transform: scale(0.8);
+        transform: scale(0.8) translateX(-63%);
+        left: 50%;
 
+    }
+
+    nav {
+        top: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 500px) {
+    section:nth-of-type(1) {
+        z-index: 2;
+        transform: scale(0.7);
+        top: 10%;
+    }
+
+    section:nth-of-type(2) {
+        margin: auto;
+        transform: scale(0.7) translateX(-72%);
+        left: 50%;
+
+    }
+
+    nav {
+        top: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0 auto;
     }
 }
