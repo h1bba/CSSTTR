@@ -1,37 +1,43 @@
+@font-face {
+    font-family: "cheee-variable", sans-serif;
+    font-variation-settings: "GRVT"0, "YEST"0;
+}
+
+
 /* https://fonts.google.com/specimen/Atma?categoryFilters=Feeling:%2FExpressive%2FPlayful */
 @font-face {
     font-family: Atma;
-    src: url(/assets/Atma-Bold.ttf);
+    src: url(assets/Atma-Bold.ttf);
     font-weight: 700;
 }
 
 @font-face {
     font-family: Atma;
-    src: url(/assets/Atma-SemiBold.ttf);
+    src: url(assets/Atma-SemiBold.ttf);
     font-weight: 600;
 }
 
 @font-face {
     font-family: Atma;
-    src: url(/assets/Atma-Medium.ttf);
+    src: url(assets/Atma-Medium.ttf);
     font-weight: 500;
 }
 
 @font-face {
     font-family: Atma;
-    src: url(/assets/Atma-Regular.ttf);
+    src: url(assets/Atma-Regular.ttf);
     font-weight: 400;
 }
 
 @font-face {
     font-family: Atma;
-    src: url(/assets/Atma-Light.ttf);
+    src: url(assets/Atma-Light.ttf);
     font-weight: 300;
 }
 
 :root {
     --bgcolor: radial-gradient(circle, rgba(53, 44, 116, 1) 0%, rgba(73, 61, 158, 1) 100%);
-    ;
+    --mondclip: ellipse(26% 30% at 50% 50%);
     --skincolor: #FFF0DC;
     --eyecolor: #578FCA;
     --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
@@ -44,6 +50,13 @@
 
     --mouthgradient: radial-gradient(circle, rgba(255, 138, 138, 1) 50%, rgba(255, 240, 220, 1) 100%);
     --cucumbergradient: linear-gradient(90deg, rgba(55, 88, 34, 1) 0%, rgba(38, 68, 18, 1) 10%, rgba(38, 68, 18, 1) 11%, rgba(55, 88, 34, 1) 20%, rgba(38, 68, 18, 1) 21%, rgba(55, 88, 34, 1) 40%, rgba(38, 68, 18, 1) 41%, rgba(55, 88, 34, 1) 60%, rgba(38, 68, 18, 1) 61%, rgba(55, 88, 34, 1) 80%, rgba(38, 68, 18, 1) 81%, rgba(38, 68, 18, 1) 91%, rgba(55, 88, 34, 1) 100%);
+
+    --kaalclip: ellipse();
+    --haar1clip: ellipse(00% 00% at 50% 20%);
+    --haar2clip: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
+    --haar3clip: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
+    --haar4clip: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
+
     --wit: #fff;
     --lichtgeel: #fffece;
     --groen: #90db3f;
@@ -72,18 +85,7 @@ body {
     font-family: Atma, sans-serif;
 }
 
-h1 {
-    position: absolute;
-    font-size: 3rem;
-    left: 50%;
-    top: 10%;
-    transform: translateX(-50%);
-    margin: auto;
-    color: var(--wit);
-    font-family: Atma, sans-serif;
-    font-weight: 600;
-    text-align: center;
-}
+
 
 /* ///////////////// */
 /* Container geheel */
@@ -103,6 +105,7 @@ main {
 section:nth-of-type(1) {
     display: flex;
     justify-content: center;
+    padding-top: 8em;
     margin: 0 auto;
     position: relative;
 
@@ -201,7 +204,7 @@ section:nth-of-type(1) {
             height: 60%;
             background-color: var(--eyebrowcolor);
 
-            clip-path: ellipse(00% 00% at 50% 20%);
+            clip-path: var(--haar1clip);
         }
 
         /* ///////////////// */
@@ -262,7 +265,7 @@ section:nth-of-type(1) {
             right: 95%;
             rotate: 5deg;
 
-            clip-path: ellipse();
+            clip-path: var(--kaalclip);
             z-index: 0;
 
         }
@@ -280,7 +283,7 @@ section:nth-of-type(1) {
             left: 95%;
             rotate: -5deg;
 
-            clip-path: ellipse();
+            clip-path: var(--kaalclip);
             z-index: 0;
         }
 
@@ -318,7 +321,7 @@ header:nth-of-type(1)::after {
     width: 10em;
     height: 4em;
 
-    clip-path: ellipse(26% 30% at 50% 50%);
+    clip-path: var(--mondclip);
 }
 
 
@@ -335,7 +338,7 @@ section:nth-of-type(2) {
     background-color: black;
 
     border-radius: 4em;
-    top: 70%;
+    top: 77%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -410,124 +413,6 @@ section:nth-of-type(2)::after {
 
 
 /* ///////////////// */
-/* komkommer eet animatie 🥒*/
-/* ///////////////// */
-@keyframes cucumbereat {
-    0% {
-        transform: translateY(0%);
-        rotate: 0deg;
-    }
-
-    70% {
-        transform: translate(10%, -100%);
-        rotate: -45deg;
-        clip-path: polygon(0 0, 50% 0, 100% 0, 100% 10%, 100% 100%, 0 100%, 0 15%);
-    }
-
-    80%, 90% {
-        clip-path: polygon(46% 11%, 75% 3%, 100% 0, 100% 12%, 100% 100%, 0 100%, 0 13%);
-    }
-
-    100% {
-        clip-path: polygon(18% 17%, 47% 20%, 78% 20%, 100% 12%, 100% 100%, 0 100%, 0 13%);
-        transform: translate(10%, -100%);
-        rotate: -45deg;
-    }
-}
-
-@keyframes cucumberretract {
-    0% {
-        clip-path: polygon(18% 17%, 47% 20%, 78% 20%, 100% 12%, 100% 100%, 0 100%, 0 13%);
-        transform: translate(10%, -100%);
-        rotate: -45deg;
-    }
-
-    100% {
-        clip-path: polygon(0 0, 50% 0, 100% 0, 100% 10%, 100% 100%, 0 100%, 0 15%);
-
-        transform: translate(0, 0%);
-        rotate: 20deg;
-    }
-}
-
-/* ///////////////// */
-/* komkommer animatie IN 📈 */
-/* ///////////////// */
-
-section:nth-of-type(1) label:has(input:checked) {
-    animation-name: cucumbereat;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-}
-
-/* ///////////////// */
-/* komkommer animatie UIT 📉 */
-/* ///////////////// */
-section:nth-of-type(1) label:has(input:not(:checked)) {
-    animation-name: cucumberretract;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-
-}
-
-/* ///////////////// */
-/* Arm animatie IN 💪 */
-/* ///////////////// */
-@keyframes armeating {
-    0% {
-        height: 20em;
-        rotate: -10deg;
-
-    }
-
-
-    100% {
-        height: 10em;
-        rotate: 0deg;
-    }
-}
-
-/* ///////////////// */
-/* Arm animatie UIT 💪 */
-/* ///////////////// */
-@keyframes armretract {
-    0% {
-        height: 10em;
-        rotate: 0deg;
-
-    }
-
-    100% {
-        height: 20em;
-        rotate: -10deg;
-
-    }
-}
-
-
-
-
-/* ///////////////// */
-/* Arm animatie IN 💪 */
-/* ///////////////// */
-section:nth-of-type(1):has(input:checked)~section:nth-of-type(2)::before {
-    animation: armeating 2s;
-    animation-fill-mode: forwards;
-}
-
-/* ///////////////// */
-/* Arm animatie UIT 💪 */
-/* ///////////////// */
-section:nth-of-type(1):has(input:not(:checked))~section:nth-of-type(2)::before {
-    animation: armretract 2s;
-    animation-fill-mode: forwards;
-}
-
-
-
-
-
-/* ///////////////// */
 /* Selectors ✔  */
 /* ///////////////// */
 
@@ -570,6 +455,8 @@ main {
         --eargradient: radial-gradient(circle, rgb(166, 123, 91) 0%, rgb(111, 78, 55));
     }
 
+
+
     /* ///////////////// */
     /* Hoofdvorm 🥚🧔🏼  */
     /* ///////////////// */
@@ -589,6 +476,7 @@ main {
             width: 105%;
         }
     }
+
 
     /* hovers */
     &:has(nav > div:nth-of-type(2) > label:nth-of-type(1):hover) header {
@@ -648,40 +536,41 @@ main {
     /* ///////////////// */
 
     &:has(input[value="haar1"]:checked) ul::before {
-        clip-path: ellipse(00% 00% at 50% 20%);
+        clip-path: var(--haar1clip);
     }
 
     &:has(input[value="haar2"]:checked) ul::before {
-        clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
 
+        clip-path: var(--haar2clip);
     }
 
     &:has(input[value="haar3"]:checked) ul::before {
-        clip-path: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
+
+        clip-path: var(--haar3clip);
 
     }
 
     &:has(input[value="haar4"]:checked) ul::before {
-        clip-path: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
-
+        clip-path: var(--haar4clip)
     }
 
     /* hovers */
 
     &:has(nav > div:nth-of-type(4) > label:nth-of-type(1):hover) ul::before {
-        clip-path: ellipse(00% 00% at 50% 20%);
+        clip-path: var(--haar1clip);
     }
 
     &:has(nav > div:nth-of-type(4) > label:nth-of-type(2):hover) ul::before {
-        clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
+        clip-path: var(--haar2clip);
     }
 
     &:has(nav > div:nth-of-type(4) > label:nth-of-type(3):hover) ul::before {
-        clip-path: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
+        clip-path: var(--haar3clip);
+
     }
 
     &:has(nav > div:nth-of-type(4) > label:nth-of-type(4):hover) ul::before {
-        clip-path: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
+        clip-path: var(--haar4clip);
     }
 
 
@@ -718,196 +607,8 @@ main {
 
 
 
-/* ///////////////// */
-/* MENU 📁 */
-/* ///////////////// */
-nav {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-left: 2em;
-    padding: 1em;
-    width: min-content;
-    background-color: rgba(0, 0, 0, .33);
-    color: white;
-    border-radius: 2em;
-    border: 4px solid white;
-    /* 
-    label {
-        display: flex;
-        flex-direction: row;
-    } */
-
-    input {
-        opacity: 0;
-    }
-
-    p {
-        padding-right: 1em;
-    }
-
-    /* ///////////////// */
-    /* 👱🏽‍♂️👨🏽👨🏻Huidskleuren selector */
-    /* ///////////////// */
-    div:nth-of-type(1), div:nth-of-type(2), div:nth-of-type(3), div:nth-of-type(4), div:nth-of-type(5) {
-        display: flex;
-        align-items: center;
-    }
-
-    div:nth-of-type(1) label:nth-of-type(1) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--wit);
-    }
-
-    div:nth-of-type(1) label:nth-of-type(2) {
-        width: 2em;
-        height: 2em;
-        background-color: #fffece;
-    }
-
-    div:nth-of-type(1) label:nth-of-type(3) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--bruin);
-    }
 
 
-    /* ///////////////// */
-    /* 🥚 Hoofdvorm selecteren */
-    /* ///////////////// */
-
-    div:nth-of-type(2) label:nth-of-type(1) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--wit);
-        border-radius: 70% / 90% 90% 50% 50%;
-    }
-
-    div:nth-of-type(2) label:nth-of-type(2) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--wit);
-        border-radius: 80% / 120% 120% 75% 75%;
-
-    }
-
-    div:nth-of-type(2) label:nth-of-type(3) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--wit);
-        border-radius: 75% / 50% 50% 100% 100%;
-
-    }
-
-
-    /* ///////////////// */
-    /* 👁‍🗨 Oogkleur selecteren */
-    /* ///////////////// */
-    div:nth-of-type(3) label:nth-of-type(1) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--eyecolor);
-    }
-
-    div:nth-of-type(3) label:nth-of-type(2) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--groen);
-    }
-
-    div:nth-of-type(3) label:nth-of-type(3) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--bruin);
-    }
-
-    /* ///////////////// */
-    /* 👱🏼‍♂️ Haarstyle selecteren */
-    /* ///////////////// */
-
-    div:nth-of-type(4) label {
-        aspect-ratio: 1/1;
-    }
-
-    div:nth-of-type(4) label:nth-of-type(1) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--wit);
-        border-radius: 100%;
-        /* clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%); */
-    }
-
-    div:nth-of-type(4) label:nth-of-type(2) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--wit);
-        clip-path: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
-    }
-
-    div:nth-of-type(4) label:nth-of-type(3) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--wit);
-        clip-path: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
-
-    }
-
-    div:nth-of-type(4) label:nth-of-type(4) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--wit);
-        clip-path: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
-
-    }
-
-
-    /* ///////////////// */
-    /* 🤎🖤Haarkleur selecteren */
-    /* ///////////////// */
-
-    div:nth-of-type(5) label:nth-of-type(1) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--lichtgeel);
-
-    }
-
-    div:nth-of-type(5) label:nth-of-type(2) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--lichtbruin);
-
-    }
-
-    div:nth-of-type(5) label:nth-of-type(3) {
-        width: 2em;
-        height: 2em;
-        background-color: var(--bruin);
-
-    }
-
-}
-
-nav label {
-    margin: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-    transform-origin: center;
-}
-
-label:has(input:checked) {
-    transform: scale(1.2);
-    outline: 2px solid yellow;
-}
-
-
-nav label:hover {
-    cursor: pointer;
-    transform: scale(1.2);
-    outline: 2px solid yellow;
-}
 
 
 @media (max-width: 1024px) {
@@ -925,7 +626,6 @@ nav label:hover {
     }
 
     nav {
-        top: 1em;
         left: 50%;
         transform: translateX(-50%);
         margin: 0 auto;

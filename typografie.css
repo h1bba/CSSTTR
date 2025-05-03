@@ -1,0 +1,70 @@
+/* typografie 🅰🅱*/
+/* ///////////////// */
+@keyframes title-hover {
+    0% {
+        transition: .5s ease;
+        font-family: "cheee-variable", sans-serif;
+        font-variation-settings: 'YEST'500, 'GRVT'500;
+    }
+
+    100% {
+        transition: .5s ease;
+        font-family: "cheee-variable", sans-serif;
+        font-variation-settings: 'YEST'0, 'GRVT'0;
+    }
+
+}
+
+h1 {
+    width: 100%;
+    color: white;
+    position: absolute;
+    font-size: 6rem;
+    left: 50%;
+    top: 15%;
+    transform: translateX(-50%);
+    margin: auto;
+    color: var(--wit);
+    font-family: cheee-variable, sans-serif;
+    font-variation-settings: "GRVT"400, "YEST"500;
+
+
+    text-align: center;
+}
+
+
+/* @layer { */
+main {
+
+    &:has(input[value="head1"]:checked) h1 {
+        transition: .5s ease;
+
+        font-family: "cheee-variable", sans-serif;
+        font-variation-settings: 'YEST'400, 'GRVT'000;
+    }
+
+    &:has(input[value="head2"]:checked) h1 {
+        transition: .5s ease;
+        font-family: "cheee-variable", sans-serif;
+        font-variation-settings: 'YEST'200, 'GRVT'200;
+    }
+
+    &:has(input[value="head3"]:checked) h1 {
+        transition: .5s ease;
+
+        font-family: "cheee-variable", sans-serif;
+        font-variation-settings: 'YEST'0, 'GRVT'620;
+    }
+
+    /* } */
+
+    /* @layer { */
+    h1:hover {
+        transition: .5s ease;
+        animation: title-hover 4s ease infinite alternate;
+        font-family: "cheee-variable", sans-serif;
+        font-variation-settings: 'YEST'500, 'GRVT'500;
+    }
+}
+
+/* } */
