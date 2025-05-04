@@ -143,4 +143,65 @@ Het was hier belangrijk om dezelfde aantal punten te behouden in de clip-path zo
 en als laatst heb ik nog wat responsivity toegevoegd
 ![responsivity](https://github.com/user-attachments/assets/6d8b9a5f-903f-4a57-961d-eb2c34689f43)
 
+# Feedback
+- [x] @layer toepassen
+Na het onderzoeken van wat @layer doet, zag ik een handige manier om het in mijn project te implementeren, aangezien we elke naam aan de layer kunnen geven heb ik ervoor gekozen om de lagen op te delen in:
+- base (root, body, html en main)
+- type (typografie, h1, fontface, variable font animaties etc.)
+- lichaam (section, armen)
+- hoofd (section, ogen, wenkbrauwen, rimpel, oren, neus, mond, etc.)
+- komkommer (komkommer, komkommer animatie, arm animatie om het overzichtelijk te houden)
+- menu (toggle arrow, arrow animatie, labels, menu styling, etc.)
+Via deze manier is het veel overzichtelijker om iets aan te passen, als ik dit vanaf het begin had gebruikt zou het ontzettend handig zijn voor het vinden van onderdelen.
+
+![image](https://github.com/user-attachments/assets/a4f42676-fe80-41be-b8d7-b802e10ab130)
+
+
+- [x] CSS in meerdere bestanden opdelen
+Ik heb gekozen om een komkommer.css, menu.css en een typografie.css te maken, daarnaast heb ik nog een style.css die deze css bestanden import.
+Als ik nog verder zou verdelen zou ik een selectors.css maken, want die heeft nog geen layer en ik zou dan de menu keuzes styling kunnen koppelen aan een variabele, zonder dat de variabele in de root zelf veranderd door de layer hogere prioriteit te geven. 
+
+- [x] Variabel font toevoegen & titel opknappen
+      
+![titlevariable](https://github.com/user-attachments/assets/6f0780ae-980a-4c1a-b0fa-b84c41c05d1f)
+
+Ik heb gekozen voor de font "Cheee Variable" font, deze heeft 2 variabelen genaamd Yeast en Gravity. Yeast zorgt er voor dat de font aan de verticale middenpunt dunner en dikker kan worden, Gravity zorgt er voor dat de gaten, zoals de o meer naar boven en onder verplaatst kunnen worden.
+
+[(Cheee Variable)](https://fonts.adobe.com/fonts/cheee-variable)
+
+Ik heb er ook voor gekozen om de hoofdvormen te koppelen aan de title.
+
+![ezgif com-optimize(1)](https://github.com/user-attachments/assets/f0c7a3f4-c205-49f6-810a-bcdc0a195ca8)
+
+
+
+- [x] De navigatie goed stylen voor chrome
+Ik gebruik zelf normaal Firefox, maar overweeg de stap te maken terug naar Chrome, tijdens het eindgesprek kwamen we er achter dat Firefox left: 0 priotiseert boven justify-content: center; wat volgens Sanne uiteindelijk in alle browsers hetzelfde zou zijn.
+Ik ben ook een stap verder gegaan door het menu in en uitklapbaar te maken zodat het goed responsive blijft voor de telefoon viewport.  
+
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/6a8ae0df-1100-4f32-b001-906487c8677d)
+
+- [x] clip path in een variabele voor haar
+Mijn CSS kon veel schoner door alle clip-paths in variabeles te stoppen, zo hoef je maar 1x de variabele aan te passen om ze op alle plekken aan te passen. Dit heb ik aangepast in mijn code.
+
+![image](https://github.com/user-attachments/assets/f5d0473b-88c8-4e01-8af7-c4eadb0ed613)
+
+
+- [x] Reflectie wat ik heb geleerd
+Dit project daagde mij vooral uit omdat ik perfectionistisch ben, en Sanne mij eigenlijk uitdaagt om dat niet te zijn, maar juist creatief te zijn en te experimenteren.
+Ik heb een hoop geleerd:
+CSS structureren, het onderverdelen van CSS bestanden zodat het overzichtelijk blijft.
+Ik heb geleerd wat @layer is en hoe ik het moet gebruiken, dit maakt inprincipe de !important styling irrelevant, aangezien we nu zelf kunnen bepalen welke CSS wordt uitgevoerd met prioriteit.
+Nesting
+advanced Border radius
+:has()
+~ gebruik
+Betere root gebruik
+Duidelijk commentaar typen
+Variable font use
+Beter begrip voor <input>
+Hoe ik labels & inputs moet stylen
+Beter begrip pseudo-classes gebruik
+
+
 **Bedankt voor het lezen**
