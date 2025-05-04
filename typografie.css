@@ -1,5 +1,38 @@
+/* ///////////////// */
 /* typografie 🅰🅱*/
 /* ///////////////// */
+@layer type {
+/* https://fonts.google.com/specimen/Atma?categoryFilters=Feeling:%2FExpressive%2FPlayful */
+@font-face {
+    font-family: Atma;
+    src: url(assets/Atma-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Atma;
+    src: url(assets/Atma-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Atma;
+    src: url(assets/Atma-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Atma;
+    src: url(assets/Atma-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Atma;
+    src: url(assets/Atma-Light.ttf);
+    font-weight: 300;
+}
+
 @keyframes title-hover {
     0% {
         transition: .5s ease;
@@ -21,7 +54,7 @@ h1 {
     position: absolute;
     font-size: 6rem;
     left: 50%;
-    top: 15%;
+    top: 5%;
     transform: translateX(-50%);
     margin: auto;
     color: var(--wit);
@@ -33,7 +66,6 @@ h1 {
 }
 
 
-/* @layer { */
 main {
 
     &:has(input[value="head1"]:checked) h1 {
@@ -56,9 +88,7 @@ main {
         font-variation-settings: 'YEST'0, 'GRVT'620;
     }
 
-    /* } */
 
-    /* @layer { */
     h1:hover {
         transition: .5s ease;
         animation: title-hover 4s ease infinite alternate;
@@ -67,4 +97,13 @@ main {
     }
 }
 
-/* } */
+}
+
+@media (max-width: 1024px) {
+    h1 {
+        font-size: clamp(2rem, 10vw, 6rem);
+                /* bottom: 0; */
+        top: 5%;
+        text-orientation: upright;
+    }
+}

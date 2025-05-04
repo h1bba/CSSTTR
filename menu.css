@@ -1,12 +1,15 @@
 /* ///////////////// */
 /* MENU 📁 */
 /* ///////////////// */
+@layer menu {
+
+
+
 nav {
     left: 1em;
     position: absolute;
     display: flex;
     flex-direction: column;
-    margin-left: 2em;
     padding: 1em;
     width: min-content;
     background-color: rgba(0, 0, 0, .33);
@@ -184,4 +187,70 @@ nav label:hover {
     cursor: pointer;
     transform: scale(1.2);
     outline: 2px solid yellow;
+}
+
+
+@media (max-width: 1024px) {
+    nav {
+        /* left: 50%;
+        transform: translateX(-50%); */
+        margin: 0 auto;
+        padding: 0.5em;
+}
+
+    /* ///////////////// */
+    /* Open close menu */
+    /* ///////////////// */
+
+    main>label:nth-of-type(1) {
+        background-image: url(/assets/arrow.svg);
+        background-size: cover;
+        width: 2em;
+        height: 2em;
+        top: 15%;
+
+        input {
+            visibility: hidden;
+        }
+    }
+
+main>label:nth-of-type(1):has(input[value="menu"]:empty) {
+    position: absolute;
+    left: 0;
+    rotate: 180deg;
+
+}
+
+main>label:nth-of-type(1):has(input[value="menu"]:empty) ~ nav {
+    /* display: none; */
+    top: 2%;
+
+    transform: translateX(-50%);
+    left: -100%;
+    transition: 1s ease;
+
+}
+
+main>label:nth-of-type(1):has(input[value="menu"]:checked) ~ nav {
+    /* display: block; */
+    top: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: .5s ease;
+}
+
+main>label:nth-of-type(1):has(input[value="menu"]:checked) {
+    rotate: 0deg;
+
+}
+
+main:has(label:nth-of-type(1) > input[value="menu"]:empty) h1 {
+        opacity: 100%;
+}
+
+main:has(label:nth-of-type(1) > input[value="menu"]:checked) h1 {
+        opacity: 30%;
+}
+
+}
 }

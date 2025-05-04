@@ -1,103 +1,85 @@
-@font-face {
-    font-family: "cheee-variable", sans-serif;
-    font-variation-settings: "GRVT"0, "YEST"0;
+@layer base, type, lichaam, komkommer, hoofd, menu;
+
+@import url('typografie.css');
+@import url('menu.css');
+@import url('komkommer.css');
+
+
+
+@layer base {
+    :root {
+        --bgcolor: radial-gradient(circle, rgba(53, 44, 116, 1) 0%, rgba(73, 61, 158, 1) 100%);
+        --mondclip: ellipse(26% 30% at 50% 50%);
+        --skincolor: #FFF0DC;
+        --eyecolor: #578FCA;
+        --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
+        --wrinklecolor: rgba(0, 0, 0, 0.1);
+        --eyebrowcolor: #fffece;
+        --skingradient: radial-gradient(circle, rgba(255, 240, 220, 1) 0%, rgba(255, 184, 167, 1));
+    
+        --eargradient: radial-gradient(circle, rgba(255, 240, 220, 1), rgb(255, 184, 167) 100%);
+        --shadowcolor: #ac967a;
+    
+        --mouthgradient: radial-gradient(circle, rgba(255, 138, 138, 1) 50%, rgba(255, 240, 220, 1) 100%);
+        --cucumbergradient: linear-gradient(90deg, rgba(55, 88, 34, 1) 0%, rgba(38, 68, 18, 1) 10%, rgba(38, 68, 18, 1) 11%, rgba(55, 88, 34, 1) 20%, rgba(38, 68, 18, 1) 21%, rgba(55, 88, 34, 1) 40%, rgba(38, 68, 18, 1) 41%, rgba(55, 88, 34, 1) 60%, rgba(38, 68, 18, 1) 61%, rgba(55, 88, 34, 1) 80%, rgba(38, 68, 18, 1) 81%, rgba(38, 68, 18, 1) 91%, rgba(55, 88, 34, 1) 100%);
+    
+        --kaalclip: ellipse();
+        --haar1clip: ellipse(00% 00% at 50% 20%);
+        --haar2clip: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
+        --haar3clip: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
+        --haar4clip: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
+    
+        --cucumbereatclip1: polygon(0 0, 50% 0, 100% 0, 100% 10%, 100% 100%, 0 100%, 0 15%);
+        --cucumbereatclip2: polygon(46% 11%, 75% 3%, 100% 0, 100% 12%, 100% 100%, 0 100%, 0 13%);
+        --cucumbereatclip3: polygon(18% 17%, 47% 20%, 78% 20%, 100% 12%, 100% 100%, 0 100%, 0 13%);
+    
+        --cucumberretractclip1: polygon(18% 17%, 47% 20%, 78% 20%, 100% 12%, 100% 100%, 0 100%, 0 13%);
+    
+    
+        --wit: #fff;
+        --lichtgeel: #fffece;
+        --groen: #90db3f;
+        --lichtbruin: #74432c;
+    
+        --bruin: #532915;
+    
+    }
+
+    html {
+        padding: 0;
+        margin: 0;
+    }
+    
+    /* ///////////////// */
+    /* achtegrond 🖼 */
+    /* ///////////////// */
+    body {
+        background: var(--bgcolor);
+        width: 100dvw;
+        height: 100dvh;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+    
+        font-family: Atma, sans-serif;
+    }
+    
+    
+    
+    /* ///////////////// */
+    /* Container geheel */
+    /* ///////////////// */
+    main {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    
+        justify-self: center;
+    }
 }
 
 
-/* https://fonts.google.com/specimen/Atma?categoryFilters=Feeling:%2FExpressive%2FPlayful */
-@font-face {
-    font-family: Atma;
-    src: url(assets/Atma-Bold.ttf);
-    font-weight: 700;
-}
-
-@font-face {
-    font-family: Atma;
-    src: url(assets/Atma-SemiBold.ttf);
-    font-weight: 600;
-}
-
-@font-face {
-    font-family: Atma;
-    src: url(assets/Atma-Medium.ttf);
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: Atma;
-    src: url(assets/Atma-Regular.ttf);
-    font-weight: 400;
-}
-
-@font-face {
-    font-family: Atma;
-    src: url(assets/Atma-Light.ttf);
-    font-weight: 300;
-}
-
-:root {
-    --bgcolor: radial-gradient(circle, rgba(53, 44, 116, 1) 0%, rgba(73, 61, 158, 1) 100%);
-    --mondclip: ellipse(26% 30% at 50% 50%);
-    --skincolor: #FFF0DC;
-    --eyecolor: #578FCA;
-    --eyegradient: radial-gradient(circle, rgba(0, 0, 0, 1) 20%, rgba(129, 190, 255, 1) 20%, rgba(129, 172, 255, 1) 49%, rgba(255, 255, 255, 1) 49%);
-    --wrinklecolor: rgba(0, 0, 0, 0.1);
-    --eyebrowcolor: #fffece;
-    --skingradient: radial-gradient(circle, rgba(255, 240, 220, 1) 0%, rgba(255, 184, 167, 1));
-
-    --eargradient: radial-gradient(circle, rgba(255, 240, 220, 1), rgb(255, 184, 167) 100%);
-    --shadowcolor: #ac967a;
-
-    --mouthgradient: radial-gradient(circle, rgba(255, 138, 138, 1) 50%, rgba(255, 240, 220, 1) 100%);
-    --cucumbergradient: linear-gradient(90deg, rgba(55, 88, 34, 1) 0%, rgba(38, 68, 18, 1) 10%, rgba(38, 68, 18, 1) 11%, rgba(55, 88, 34, 1) 20%, rgba(38, 68, 18, 1) 21%, rgba(55, 88, 34, 1) 40%, rgba(38, 68, 18, 1) 41%, rgba(55, 88, 34, 1) 60%, rgba(38, 68, 18, 1) 61%, rgba(55, 88, 34, 1) 80%, rgba(38, 68, 18, 1) 81%, rgba(38, 68, 18, 1) 91%, rgba(55, 88, 34, 1) 100%);
-
-    --kaalclip: ellipse();
-    --haar1clip: ellipse(00% 00% at 50% 20%);
-    --haar2clip: polygon(50% 0%, 87% 5%, 100% 60%, 66% 25%, 33% 25%, 0% 60%, 13% 5%);
-    --haar3clip: polygon(50% 0%, 80% 0%, 100% 60%, 75% 15%, 25% 15%, 0% 60%, 20% 0%);
-    --haar4clip: polygon(75% 0%, 90% 20%, 100% 60%, 75% 25%, 25% 25%, 0% 60%, 00% 0%);
-
-    --wit: #fff;
-    --lichtgeel: #fffece;
-    --groen: #90db3f;
-    --lichtbruin: #74432c;
-
-    --bruin: #532915;
-
-}
-
-html {
-    padding: 0;
-    margin: 0;
-}
-
-/* ///////////////// */
-/* achtegrond 🖼 */
-/* ///////////////// */
-body {
-    background: var(--bgcolor);
-    width: 100dvw;
-    height: 100dvh;
-    padding: 0;
-    margin: 0;
-    overflow: hidden;
-
-    font-family: Atma, sans-serif;
-}
-
-
-
-/* ///////////////// */
-/* Container geheel */
-/* ///////////////// */
-main {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-
-    justify-self: center;
-}
-
+@layer hoofd {
 /* ///////////////// */
 /* section 1 hoofd 👨 */
 /* ///////////////// */
@@ -115,7 +97,7 @@ section:nth-of-type(1) {
 
     header:nth-of-type(1) {
         position: absolute;
-        bottom: -15em;
+        bottom: -6em;
         display: flex;
         margin: auto;
         width: 20rem;
@@ -324,9 +306,9 @@ header:nth-of-type(1)::after {
     clip-path: var(--mondclip);
 }
 
+}
 
-
-
+@layer lichaam {
 /* ///////////////// */
 /* lichaam 🧍‍♂️ */
 /* ///////////////// */
@@ -338,7 +320,7 @@ section:nth-of-type(2) {
     background-color: black;
 
     border-radius: 4em;
-    top: 77%;
+    top: 66%;
     left: 50%;
     transform: translateX(-50%);
 
@@ -409,7 +391,11 @@ section:nth-of-type(2)::after {
 
     transform-origin: top;
     rotate: 10deg;
+    }
 }
+
+
+
 
 
 /* ///////////////// */
@@ -615,32 +601,20 @@ main {
     section:nth-of-type(1) {
         z-index: 2;
         transform: scale(0.8);
-        top: 7%;
+        top: 12%;
     }
 
     section:nth-of-type(2) {
         margin: auto;
         transform: scale(0.8) translateX(-63%);
-        left: 50%;
-
-    }
-
-    nav {
-        left: 50%;
-        transform: translateX(-50%);
-        margin: 0 auto;
-    }
-
-    h1 {
-        font-size: 2rem;
-        bottom: 0;
+        bottom: -4%;
         top: unset;
-        text-orientation: upright;
-        z-index: 5;
+        /* left: 50%; */
+
     }
 }
 
-@media (max-width: 500px) {
+/* @media (max-width: 500px) {
     section:nth-of-type(1) {
         z-index: 2;
         transform: scale(0.7);
@@ -660,7 +634,7 @@ main {
         transform: translateX(-50%);
         margin: 0 auto;
     }
-}
+} */
 
 @media (prefers-color-scheme: light) {
     :root {
