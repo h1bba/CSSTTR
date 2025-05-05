@@ -1,4 +1,4 @@
-@layer base, type, lichaam, komkommer, hoofd, menu;
+@layer base, type, lichaam, hoofd, komkommer, menu;
 
 @import url('typografie.css');
 @import url('menu.css');
@@ -35,6 +35,9 @@
     
         --cucumberretractclip1: polygon(18% 17%, 47% 20%, 78% 20%, 100% 12%, 100% 100%, 0 100%, 0 13%);
     
+        --head1radius: 70% / 90% 90% 50% 50%;
+        --head2radius: 80% / 120% 120% 75% 75%;
+        --head3radius: 75% / 50% 50% 100% 100%;
     
         --wit: #fff;
         --lichtgeel: #fffece;
@@ -448,15 +451,15 @@ main {
     /* Hoofdvorm 🥚🧔🏼  */
     /* ///////////////// */
     &:has(input[value="head1"]:checked) header {
-        border-radius: 70% / 90% 90% 50% 50%;
+        border-radius: var(--head1radius);
     }
 
     &:has(input[value="head2"]:checked) header {
-        border-radius: 80% / 120% 120% 75% 75%;
+        border-radius: var(--head2radius);
     }
 
     &:has(input[value="head3"]:checked) header {
-        border-radius: 75% / 50% 50% 100% 100%;
+        border-radius: var(--head3radius);
 
         /* bij hoofdvorm 3 de haar breder maken zodat het past op het hoofd */
         & ul::before {
@@ -467,17 +470,17 @@ main {
 
     /* hovers */
     &:has(nav > div:nth-of-type(2) > label:nth-of-type(1):hover) header {
-        border-radius: 70% / 90% 90% 50% 50%;
+        border-radius: var(--head1radius);
 
     }
 
     &:has(nav > div:nth-of-type(2) > label:nth-of-type(2):hover) header {
-        border-radius: 80% / 120% 120% 75% 75%;
+        border-radius: var(--head2radius);
 
     }
 
     &:has(nav > div:nth-of-type(2) > label:nth-of-type(3):hover) header {
-        border-radius: 75% / 50% 50% 100% 100%;
+        border-radius: var(--head3radius);
 
         /* bij hoofdvorm 3 de haar breder maken zodat het past op het hoofd */
         & ul::before {
