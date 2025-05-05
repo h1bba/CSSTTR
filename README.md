@@ -60,6 +60,7 @@ Ik heb het gevoel dat dit de juiste keuze was omdat we de pseudo element ::befor
 
 ### Voortgang
 Ik heb de personage kunnen maken na veel handmatig de waardes heen en weer aan te passen totdat ik blij was met de styling.
+
 ![Week2 progress](https://github.com/user-attachments/assets/1f802fea-9428-4b6d-b57f-0e9e00462b86)
 
 ### Week 3
@@ -75,12 +76,15 @@ In week 3 was ik vooral bezig met de UX kant van mijn project, dit was dus label
 Hierdoor kan ik met de juiste selectors een "UI" creëeren zonder het gebruik van JavaScript.
 
 Wat ik dus doe voor bijvoorbeeld de huidskleur veranderen is de variabele in de root een andere value geven dan voorgaand.
+
 ![huidskleur](https://github.com/user-attachments/assets/52242fb3-0b67-4d2f-8b7d-b654271a99ca)
 
 Voor de haarstijl heb ik clip-path leren gebruiken. Wat hier vooral complex was dat ik clip-path moest gebruiken wat ik niet eerder heb aangeraakt. Na wat hulp van Nils Binder en wat bronnen hebben we samen onze eerste haarstyle kunnen maken.
+
 ![haarstyle](https://github.com/user-attachments/assets/7dbee0c2-4df0-47bb-9a08-28623cae8318)
 
 Ook heb ik een komkommer animatie gemaakt
+
 ![komkommer animatie](https://github.com/user-attachments/assets/0958654b-7127-4e27-8b31-121c43435f3e)
 
 
@@ -106,6 +110,7 @@ Ik begon met de labels en inputs op de juiste manier te nesten
 Before
 
 ![labelseninputs](https://github.com/user-attachments/assets/aeecf1f1-17f6-4e47-8c00-951d045eb228)
+
 ![labelseninputs](https://github.com/user-attachments/assets/4b1a9f59-7411-44da-bb4c-784e209b0ad1)
 
 After
@@ -119,6 +124,7 @@ After
 Daarna ben ik bezig geweest om de UI te verbeteren en heb ik de feedforward kunnen toepassen na wat hulp van Jamie T
 
 ![feedforward](https://github.com/user-attachments/assets/0cd40a67-d669-4b9f-bb3c-1169980589b0)
+
 ![image](https://github.com/user-attachments/assets/2422b51a-fe94-46f7-b27b-552bcaa2e053)
 
 Ook heb ik wat comments geplaatst in mijn CSS om het wat overzichtelijker te maken
@@ -128,10 +134,12 @@ Ook heb ik wat comments geplaatst in mijn CSS om het wat overzichtelijker te mak
 
 - [x] CSS nesting meer gebruiken
 - [x] Opschonen code met onnodig "&" gebruik
+- [ ] 
 ![image](https://github.com/user-attachments/assets/3ad3703c-0126-4677-804f-9572b7d27a59)
 
 Na deze dingen gefixt te hebben heb ik nog weinig tijd gehad om de puntjes op de i te zetten. Ik heb nog de komkommer animatie verbeterd waar de personage 2 hapjes neemt uit de komkommer.
 Dit heb ik gedaan met het gebruik van clip path in een animatie zelf.
+
 ![komkommer](https://github.com/user-attachments/assets/e90ce455-d1d7-4f18-881f-aa47c7990036)
 
 
@@ -141,6 +149,94 @@ Het was hier belangrijk om dezelfde aantal punten te behouden in de clip-path zo
 
 - [x] Responsive
 en als laatst heb ik nog wat responsivity toegevoegd
+
 ![responsivity](https://github.com/user-attachments/assets/6d8b9a5f-903f-4a57-961d-eb2c34689f43)
+
+# Feedback
+- [x] @layer toepassen
+Na het onderzoeken van wat @layer doet, zag ik een handige manier om het in mijn project te implementeren, aangezien we elke naam aan de layer kunnen geven heb ik ervoor gekozen om de lagen op te delen in:
+- base (root, body, html en main)
+- type (typografie, h1, fontface, variable font animaties etc.)
+- lichaam (section, armen)
+- hoofd (section, ogen, wenkbrauwen, rimpel, oren, neus, mond, etc.)
+- komkommer (komkommer, komkommer animatie, arm animatie om het overzichtelijk te houden)
+- menu (toggle arrow, arrow animatie, labels, menu styling, etc.)
+Via deze manier is het veel overzichtelijker om iets aan te passen, als ik dit vanaf het begin had gebruikt zou het ontzettend handig zijn voor het vinden van onderdelen.
+
+![image](https://github.com/user-attachments/assets/a4f42676-fe80-41be-b8d7-b802e10ab130)
+
+
+- [x] CSS in meerdere bestanden opdelen
+
+Ik heb gekozen om een komkommer.css, menu.css en een typografie.css te maken, daarnaast heb ik nog een style.css die deze css bestanden import.
+Als ik nog verder zou verdelen zou ik een selectors.css maken, want die heeft nog geen layer en ik zou dan de menu keuzes styling kunnen koppelen aan een variabele, zonder dat de variabele in de root zelf veranderd door de layer hogere prioriteit te geven. 
+
+- [x] Variabel font toevoegen & titel opknappen
+      
+![titlevariable](https://github.com/user-attachments/assets/6f0780ae-980a-4c1a-b0fa-b84c41c05d1f)
+
+Ik heb gekozen voor de font "Cheee Variable" font, deze heeft 2 variabelen genaamd Yeast en Gravity. Yeast zorgt er voor dat de font aan de verticale middenpunt dunner en dikker kan worden, Gravity zorgt er voor dat de gaten, zoals de o meer naar boven en onder verplaatst kunnen worden.
+
+[(Cheee Variable)](https://fonts.adobe.com/fonts/cheee-variable)
+
+Ik heb er ook voor gekozen om de hoofdvormen te koppelen aan de title.
+
+![ezgif com-optimize(1)](https://github.com/user-attachments/assets/f0c7a3f4-c205-49f6-810a-bcdc0a195ca8)
+
+
+
+- [x] De navigatie goed stylen voor chrome
+
+Ik gebruik zelf normaal Firefox, maar overweeg de stap te maken terug naar Chrome, tijdens het eindgesprek kwamen we er achter dat Firefox left: 0 priotiseert boven justify-content: center; wat volgens Sanne uiteindelijk in alle browsers hetzelfde zou zijn.
+Ik ben ook een stap verder gegaan door het menu in en uitklapbaar te maken zodat het goed responsive blijft voor de telefoon viewport.  
+
+![ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/6a8ae0df-1100-4f32-b001-906487c8677d)
+
+- [x] clip path in een variabele voor haar
+
+Mijn CSS kon veel schoner door alle clip-paths in variabeles te stoppen, zo hoef je maar 1x de variabele aan te passen om ze op alle plekken aan te passen. Dit heb ik aangepast in mijn code.
+
+![image](https://github.com/user-attachments/assets/f5d0473b-88c8-4e01-8af7-c4eadb0ed613)
+
+
+- [x] Reflectie wat ik heb geleerd
+
+Dit project daagde mij vooral uit omdat ik perfectionistisch ben, en Sanne mij eigenlijk uitdaagt om dat niet te zijn, maar juist creatief te zijn en te experimenteren.
+
+Ik heb een hoop geleerd:
+
+CSS structureren, het onderverdelen van CSS bestanden zodat het overzichtelijk blijft.
+
+Ik heb geleerd wat @layer is en hoe ik het moet gebruiken, dit maakt inprincipe de !important styling irrelevant, aangezien we nu zelf kunnen bepalen welke CSS wordt uitgevoerd met prioriteit.
+
+CSS Nesting en & children gebruik.
+
+Geavanceerde Border radius
+
+:has() gebruiken om inputs te valideren en styling aan te passen aan de hand van checked of value.
+
+~ gebruik om andere elementen te stylen buiten de parent element.
+
+Betere :root gebruik en meer variabel gebruik dan voorheen.
+
+Duidelijk commentaar typen door emojis te gebruiken en commentaar te onderscheiden.
+
+Variable fonts, custom axis zoals Gravity en Yeast. Animeren van variabele font.
+
+Beter begrip voor <input> en value.
+
+Labels & inputs stylen, zoals de checkbox onzichtbaar maken, scalen en responsive maken.
+
+Beter begrip pseudo-classes gebruik door de styling van het lichaam, ook het animeren van pseudo-classes.
+
+Clip-path leren animeren, verhouding punten aanhouden om clip path te kunnen animeren.
+
+Hamburger menu met pure CSS doormiddel van checkbox gebruik.
+
+Opnieuw gekeken naar responsivity
+
+![ezgif com-video-to-gif-converter(1)](https://github.com/user-attachments/assets/659f344d-12bf-40af-9ca2-0b3b08479e4f)
+
+Clamp gebruik om gewenste font grootte te behouden.
 
 **Bedankt voor het lezen**
