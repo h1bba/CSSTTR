@@ -223,7 +223,7 @@ Dit project daagde mij vooral uit omdat ik perfectionistisch ben, en Sanne mij e
 
 - Variable fonts, custom axis zoals Gravity en Yeast. Animeren van variabele font.
 
-- Beter begrip voor <input> en value.
+- Beter begrip voor input en value.
 
 - Labels & inputs stylen, zoals de checkbox onzichtbaar maken, scalen en responsive maken.
 
