@@ -203,40 +203,40 @@ Mijn CSS kon veel schoner door alle clip-paths in variabeles te stoppen, zo hoef
 
 Dit project daagde mij vooral uit omdat ik perfectionistisch ben, en Sanne mij eigenlijk uitdaagt om dat niet te zijn, maar juist creatief te zijn en te experimenteren.
 
-Ik heb een hoop geleerd:
+## Wat ik heb geleerd:
 
-CSS structureren, het onderverdelen van CSS bestanden zodat het overzichtelijk blijft.
+- CSS structureren, het onderverdelen van CSS bestanden zodat het overzichtelijk blijft.
 
-Ik heb geleerd wat @layer is en hoe ik het moet gebruiken, dit maakt inprincipe de !important styling irrelevant, aangezien we nu zelf kunnen bepalen welke CSS wordt uitgevoerd met prioriteit.
+- Ik heb geleerd wat @layer is en hoe ik het moet gebruiken, dit maakt inprincipe de !important styling irrelevant, aangezien we nu zelf kunnen bepalen welke CSS wordt uitgevoerd met prioriteit.
 
-CSS Nesting en & children gebruik.
+- CSS Nesting en & children gebruik.
 
-Geavanceerde Border radius
+- Geavanceerde Border radius door meerdere hoeken appart te stylen en hiermee vormen creëeren
 
-:has() gebruiken om inputs te valideren en styling aan te passen aan de hand van checked of value.
+- :has() gebruiken om inputs te valideren en styling aan te passen aan de hand van checked of value.
 
-~ gebruik om andere elementen te stylen buiten de parent element.
+- ~ gebruik om andere elementen te stylen buiten de parent element.
 
-Betere :root gebruik en meer variabel gebruik dan voorheen.
+- Betere :root gebruik en meer variabel gebruik dan voorheen.
 
-Duidelijk commentaar typen door emojis te gebruiken en commentaar te onderscheiden.
+- Duidelijk commentaar typen door emojis te gebruiken en commentaar te onderscheiden.
 
-Variable fonts, custom axis zoals Gravity en Yeast. Animeren van variabele font.
+- Variable fonts, custom axis zoals Gravity en Yeast. Animeren van variabele font.
 
-Beter begrip voor <input> en value.
+- Beter begrip voor <input> en value.
 
-Labels & inputs stylen, zoals de checkbox onzichtbaar maken, scalen en responsive maken.
+- Labels & inputs stylen, zoals de checkbox onzichtbaar maken, scalen en responsive maken.
 
-Beter begrip pseudo-classes gebruik door de styling van het lichaam, ook het animeren van pseudo-classes.
+- Beter begrip pseudo-classes gebruik door de styling van het lichaam, ook het animeren van pseudo-classes.
 
-Clip-path leren animeren, verhouding punten aanhouden om clip path te kunnen animeren.
+- Clip-path leren animeren, verhouding punten aanhouden om clip path te kunnen animeren.
 
-Hamburger menu met pure CSS doormiddel van checkbox gebruik.
+- Hamburger menu met pure CSS doormiddel van checkbox gebruik.
 
-Opnieuw gekeken naar responsivity
+- Opnieuw gekeken naar responsivity
 
 ![ezgif com-video-to-gif-converter(1)](https://github.com/user-attachments/assets/659f344d-12bf-40af-9ca2-0b3b08479e4f)
 
-Clamp gebruik om gewenste font grootte te behouden.
+- Clamp gebruik om gewenste font grootte te behouden.
 
 **Bedankt voor het lezen**
